@@ -386,7 +386,10 @@ class _BulkGeneralInvitationScreenState
           }
 
           // Validate phone number
-          final cleanPhone = phone.replaceAll(RegExp(r'[^\d]'), '');
+          String cleanPhone = phone.replaceAll(RegExp(r'[^\d]'), '');
+          if (phone.trim().startsWith('0') && !cleanPhone.startsWith('0')) {
+            cleanPhone = '0$cleanPhone';
+          }
           if (cleanPhone.length < 10 || cleanPhone.length > 13) {
             errors.add('Baris ${rowIndex + 1}: No. HP tidak valid (${phone})');
             continue;
