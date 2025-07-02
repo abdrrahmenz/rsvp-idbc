@@ -434,7 +434,6 @@ class InvitationProvider extends ChangeNotifier {
         'name': data['name'].toString().trim(),
         'address': data['address'].toString().trim(),
         'phone': data['phone'].toString().trim(),
-        'updated_at': DateTime.now().toIso8601String(),
       };
 
       print('Updating general invitation data: $updateData');

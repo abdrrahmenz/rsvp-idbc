@@ -204,7 +204,6 @@ class StudentProvider extends ChangeNotifier {
         'name': data['name'].toString().trim(),
         'address': data['address'].toString().trim(),
         'phone': data['phone'].toString().trim(),
-        'updated_at': DateTime.now().toIso8601String(),
       };
 
       print('Updating student data: $updateData');
@@ -637,7 +636,6 @@ class StudentProvider extends ChangeNotifier {
         'address': data['address'].toString().trim(),
         'phone': data['phone'].toString().trim(),
         'person_count': data['person_count'] ?? 1,
-        'updated_at': DateTime.now().toIso8601String(),
       };
 
       // Update guardian
